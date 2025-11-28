@@ -1,0 +1,70 @@
+name: AutoDuty Update Checker
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   
+  workflow_dispatch:         
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fetch latest release from AutoDuty
+        id: release
+        run: |
+          curl -s https://api.github.com/repos/erdelf/AutoDuty/releases/latest > release.json
+          echo "tag=$(jq -r .tag_name release.json)" >> $GITHUB_OUTPUT
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          jq -r .body release.json >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Load stored version
+        id: stored
+        run: |
+          if [ -f last_version.txt ]; then
+            echo "version=$(cat last_version.txt)" >> $GITHUB_OUTPUT
+          else
+            echo "version=none" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Compare versions
+        id: compare
+        run: |
+          if [ "${{ steps.release.outputs.tag }}" != "${{ steps.stored.outputs.version }}" ]; then
+            echo "update=true" >> $GITHUB_OUTPUT
+          else
+            echo "update=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send Discord notification
+        if: steps.compare.outputs.update == 'true'
+        run: |
+          jq -n \
+            --arg title "AutoDuty Update: ${{ steps.release.outputs.tag }}" \
+            --arg desc "${{ steps.release.outputs.body }}" \
+          '{
+            "username": "AutoDuty Updates",
+            "embeds": [{
+              "title": $title,
+              "description": $desc
+            }]
+          }' > payload.json
+
+          curl -H "Content-Type: application/json" \
+               -d @payload.json \
+               "https://discord.com/api/webhooks/1443845315332542624/_CZeDQ-R2C4fiZwCON4Gkohq6ZnGgZyP5reXSyL4gAnJ6J-PFwdmjU8SZ17oQsya285Q"
+
+      - name: Save new version
+        if: steps.compare.outputs.update == 'true'
+        run: |
+          echo "${{ steps.release.outputs.tag }}" > last_version.txt
+
+      - name: Commit stored version
+        if: steps.compare.outputs.update == 'true'
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add last_version.txt
+          git commit -m "Store latest version"
+          git push
