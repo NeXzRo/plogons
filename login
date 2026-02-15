@@ -9,4 +9,3 @@
 /rotation off
 /bmrai off
 /ad
-/e Welcome~
