@@ -9,3 +9,4 @@
 /rotation off
 /bmrai off
 /ad
+/bmrai ui
