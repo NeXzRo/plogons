@@ -1,4 +1,4 @@
-ChocoboStance = "Healer" 
+ChocoboStance = "Healer"  -- "Attacker", "Defender" 
 
 function GetBuddyTimeRemaining()
     if Instances.Buddy and Instances.Buddy.CompanionInfo and Instances.Buddy.CompanionInfo.TimeLeft then
