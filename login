@@ -8,6 +8,5 @@
 /rotation off
 /bmrai off
 /ad
-/wait 3
+/wait 5
 /nastatus
-/snd run Chocobo
