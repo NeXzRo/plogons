@@ -4,10 +4,10 @@
 /prezo
 /btb gfxlow on
 /btb sound off
-/nastatus
 /qst
 /rotation off
 /bmrai off
 /ad
 /wait 3
+/nastatus
 /snd run Chocobo
