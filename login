@@ -1,3 +1,4 @@
+/wait 10
 /pcf fps setlower 15
 /pcf fps setupper 15
 /party
