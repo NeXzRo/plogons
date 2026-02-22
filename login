@@ -1,4 +1,4 @@
-/wait 10
+/wait 15
 /pcf fps setlower 15
 /pcf fps setupper 15
 /party
@@ -9,5 +9,4 @@
 /rotation off
 /bmrai off
 /ad
-/wait 5
-/nastatus
+/stylist all
