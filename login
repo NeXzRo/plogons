@@ -1,3 +1,4 @@
+c
 /pcf fps setlower 15
 /pcf fps setupper 20
 /wait 10
@@ -11,3 +12,4 @@
 /rsr off
 /bmrai off
 /stylist all
+/e [Welcome~]
