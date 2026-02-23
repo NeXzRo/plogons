@@ -1,12 +1,13 @@
-/wait 15
 /pcf fps setlower 15
 /pcf fps setupper 20
+/wait 10
+/btb gfxlow on
+/wait 2
+/btb sound off
+/ad
+/qst
 /party
 /prezo
-/btb gfxlow on
-/btb sound off
-/qst
-/rotation off
+/rsr off
 /bmrai off
-/ad
 /stylist all
