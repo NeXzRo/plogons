@@ -1,4 +1,4 @@
-c
+/e [Login]
 /pcf fps setlower 15
 /pcf fps setupper 20
 /wait 10
