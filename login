@@ -1,6 +1,6 @@
 /wait 15
 /pcf fps setlower 15
-/pcf fps setupper 15
+/pcf fps setupper 20
 /party
 /prezo
 /btb gfxlow on
