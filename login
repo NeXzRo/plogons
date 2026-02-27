@@ -12,4 +12,5 @@
 /rsr off
 /bmrai off
 /stylist all
+/tpclick
 /e [Welcome~]
