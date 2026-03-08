@@ -1,9 +1,7 @@
-/e [Login]
 /pcf fps setlower 15
 /pcf fps setupper 20
-/wait 10
+/wait 20
 /btb gfxlow on
-/wait 2
 /btb sound off
 /ad
 /qst
@@ -11,6 +9,5 @@
 /prezo
 /rsr off
 /bmrai off
-/stylist all
 /tpclick
 /e [Welcome~]
