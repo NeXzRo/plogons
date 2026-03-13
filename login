@@ -7,6 +7,7 @@
 /btb sound off
 /ad
 /qst
+/mog
 /party
 /rsr off
 /bmrai off
