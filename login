@@ -1,6 +1,6 @@
 /wait 20
-/pcf fps setlower 15
-/pcf fps setupper 15
+/pcf fps setlower 20
+/pcf fps setupper 20
 /gres 0.100
 /gres on
 /btb gfxlow on
