@@ -1,6 +1,6 @@
-/wait 20
-/pcf fps setlower 20
-/pcf fps setbase 20
+/wait 30
+/pcf fps setlower 15
+/pcf fps setbase 15
 /pcf fps setupper 20
 /gres 0.100
 /gres on
