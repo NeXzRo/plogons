@@ -2,6 +2,7 @@
 /pcf fps setlower 15
 /pcf fps setbase 15
 /pcf fps setupper 20
+/prezo
 /gres 0.100
 /gres on
 /btb gfxlow on
