@@ -13,4 +13,7 @@
 /rsr off
 /bmrai off
 /tpclick
+/ad repair
+/wait 10
+/ad go inn
 /e [Welcome~]
