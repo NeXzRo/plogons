@@ -1,4 +1,4 @@
-/wait 30
+/wait 35
 /pcf fps setlower 15
 /pcf fps setbase 15
 /pcf fps setupper 20
@@ -14,6 +14,6 @@
 /bmrai off
 /tpclick
 /ad repair
-/wait 10
+/wait 25
 /ad go inn
 /e [Welcome~]
