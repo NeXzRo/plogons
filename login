@@ -1,4 +1,5 @@
 /wait 30
+/e [Login] Commands
 /pcf fps setlower 15
 /pcf fps setbase 15
 /pcf fps setupper 20
@@ -12,8 +13,9 @@
 /party
 /rsr off
 /bmrai off
-/tpclick
+/e [Login] Repairing
 /ad repair
 /wait 40
+/e [Login] Inn
 /ad go inn
-/e [Welcome~]
+/e [Login] Done
