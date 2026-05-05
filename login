@@ -1,3 +1,4 @@
+/e [Login] Start
 /wait 30
 /e [Login] Commands
 /pcf fps setlower 20
@@ -10,7 +11,7 @@
 /ad
 /qst
 /mog
-/party
+/p
 /rsr off
 /bmrai off
 /e [Login] Repairing
@@ -18,4 +19,4 @@
 /wait 40
 /e [Login] Inn
 /ad go inn
-/e [Login] Done
+/e [Login] Finished
