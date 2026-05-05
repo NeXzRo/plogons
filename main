@@ -1,0 +1,10 @@
+/wait 5
+/pcf fps setlower 30
+/pcf fps setbase 60
+/pcf fps setupper 70
+/wintitle Kyara
+/hudman condition "Toggle by command" off
+/party
+/cwl1
+/heels enable
+/e [Welcome~]
