@@ -11,7 +11,7 @@
 /ad
 /qst
 /mog
-/p
+/party
 /rsr off
 /bmrai off
 /e [Login] Repairing
