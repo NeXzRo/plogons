@@ -1,3 +1,4 @@
+/wait 10
 /wintitle Kyara
 /hudman condition "Toggle by command" off
 /party
