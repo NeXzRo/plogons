@@ -8,6 +8,7 @@
 /gres on
 /btb gfxlow on
 /btb sound off
+/tpclick
 /ad
 /qst
 /mog
